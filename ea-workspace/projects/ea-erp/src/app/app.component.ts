@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteNav, RestInterceptor } from 'ea-core';
+import { RouteNav, RestInterceptor } from 'eal-core';
 
 @Component({
   selector: 'ea-root',

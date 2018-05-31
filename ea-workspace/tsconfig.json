@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "ea-core": [
-        "dist/ea-core"
+      "eal-core": [
+        "dist/eal-core"
       ],
-      "ea-core/*": [
-        "dist/ea-core/*"
+      "eal-core/*": [
+        "dist/eal-core/*"
       ]
     }
   }
