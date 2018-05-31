@@ -235,6 +235,46 @@
           }
         }
       }
+    },
+    "eal-core": {
+      "root": "projects/eal-core",
+      "sourceRoot": "projects/eal-core/src",
+      "projectType": "library",
+      "prefix": "eal",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/eal-core/tsconfig.lib.json",
+            "project": "projects/eal-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/eal-core/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/eal-core/src/test.ts",
+            "tsConfig": "projects/eal-core/tsconfig.spec.json",
+            "karmaConfig": "projects/eal-core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/eal-core/tsconfig.lib.json",
+              "projects/eal-core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ea-workspace"

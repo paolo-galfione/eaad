@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouteNav, RestInterceptor } from 'ea-core';
 
 @Component({
   selector: 'ea-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ea';
+  pippo: RestInterceptor;
 }
