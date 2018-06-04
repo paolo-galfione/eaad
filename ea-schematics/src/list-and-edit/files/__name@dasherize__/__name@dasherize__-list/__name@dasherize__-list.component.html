@@ -1,6 +1,6 @@
 <eal-table
   [fields]="fields"
-  [items]="eaClienteList | async"
+  [items]="<%=camelize(name)%>List | async"
   key="id"
   description="ragioneSociale"
   (addItem)="add<%=classify(name)%>()"
