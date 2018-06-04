@@ -14,5 +14,5 @@ Pe creare una nuova componente applicativa digitare:
 
 Per esempio:
 
-`ng generate ea-schematics:list-and-edit --project=eal-erp --config=product.yaml`
+`ng generate ea-schematics:list-and-edit --project=eal-erp --config=cliente.yaml`
 

@@ -11,7 +11,7 @@ import { <%=classify(name)%>Service } from '../services/<%=dasherize(name)%>-ser
 })
 export class <%=classify(name)%>ListComponent implements OnInit {
   fields: ColumnField[] = [
-<% for(let i=0; i<tableColumns.length; i++) { %>     {name: <%=tableColumns[i]%>, title: '<%=fields[tableColumns[i]].label%>'}<%=(i+1 === tableColumns.length)?'':','%>
+<% for(let i=0; i<tableColumns.length; i++) { %>     {name: '<%=tableColumns[i]%>', title: '<%=fields[tableColumns[i]].label%>'}<%=(i+1 === tableColumns.length)?'':','%>
 <% } %>
   ];
   <%=camelize(name)%>List: Observable<<%=classify(name)%>[]>;
