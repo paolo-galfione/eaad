@@ -9,9 +9,8 @@ import { EaClienteModule } from 'eal-erp';
 export const routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, title: 'Home' },
-//  { path: 'clienti', loadChildren: 'eal-erp#EaClienteModule', title: 'Clienti' }
   { path: 'clienti', loadChildren: 'dist/eal-erp#EaClienteModule', title: 'Clienti' },
-  { path: 'prodotto', loadChildren: 'dist/eal-erp#ProdottoModule', title: 'Prodotti' }
+//  { path: 'prodotto', loadChildren: 'dist/eal-erp#ProdottoModule', title: 'Prodotti' }
 ];
 
 @NgModule({

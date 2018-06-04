@@ -9,4 +9,5 @@ Questo repository contiene:
 # Versioni
 
 0.1.0 - ea-erp - prima versione del workspace applicativo
+0.2.0 - ea-schematics - prima versione del progetto schematics
 
