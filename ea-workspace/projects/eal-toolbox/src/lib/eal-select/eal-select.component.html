@@ -1,7 +1,7 @@
 <div class="form-group">
     <label for="{{ngControl.name}}">{{label}}</label>
     <select [value]="value"
-            (elect)="value = $event.target.value;"
+            (change)="value = $event.target.value;"
             (blur)="onTouch()"
             [disabled]="disabled"
             class="form-control"

@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "list-and-edit": {
+      "aliases": [ "lae" ],
+      "factory": "./list-and-edit",
+      "description": "Genera un modulo con lista e edit di entità applicative",
+      "schema": "./list-and-edit/schema.json"
+    }
+  }
+}

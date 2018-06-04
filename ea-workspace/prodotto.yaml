@@ -1,0 +1,39 @@
+name: 'prodotto'
+description: 'descrizione'
+key: 'id'
+tableColumns: [ 'id', 'descrizione', 'tipologia', 'prezzo' ]
+addTitle: 'Inserimento di un nuovo prodotto'
+updateTitle: 'Aggiornamento di un prodotto'
+fields:
+  id:
+    label: 'Id'
+    type: 'number'
+    required: true
+    control: 'text'
+  descrizione:
+    label: 'Descrizione'
+    type: 'string'
+    required: true
+    control: 'text'
+  tipologia:
+    label: 'Tipo prodotto'
+    type: 'string'
+    required: false
+    control: 'select'
+    options: "[ 'Alimentari', 'Casalinghi', 'Elettronica' ]"
+  prezzo:
+    label: 'Prezzo'
+    type: 'string'
+    required: false
+    control: 'text'
+  disponibile:
+    label: 'Disponibile'
+    type: 'boolean'
+    required: false
+    control: 'check'
+  fornitore:
+    label: 'Fornitore'
+    type: 'string'
+    required: false
+    control: 'text'
+
