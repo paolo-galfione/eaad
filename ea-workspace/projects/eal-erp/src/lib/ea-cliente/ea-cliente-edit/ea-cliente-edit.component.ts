@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { EaClienteService } from '../services/ea-cliente-service';
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { EaClienteService } from '../services/ea-cliente-service';
 
 const ADD_TITLE = 'Inserimento di un nuovo cliente';
 const UPDATE_TITLE = 'Aggiornamento di un cliente';
 
 @Component({
-  templateUrl: './ea-cliente-edit.component.html',
-  styleUrls: ['./ea-cliente-edit.component.css']
+  templateUrl: './ea-cliente-edit.component.html'
 })
 export class EaClienteEditComponent implements OnInit {
   form: FormGroup;
@@ -38,4 +38,5 @@ export class EaClienteEditComponent implements OnInit {
   backToList() {
     this.router.navigate(['..'], { relativeTo: this.route });
   }
+
 }

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { ColumnField } from 'eal-toolbox';
+
 import { EaCliente } from '../interfaces/ea-cliente';
 import { EaClienteService } from '../services/ea-cliente-service';
-import { ColumnField } from 'eal-toolbox/lib/interfaces/column-field';
 
 @Component({
-  templateUrl: './ea-cliente-list.component.html',
-  styleUrls: ['./ea-cliente-list.component.css']
+  templateUrl: './ea-cliente-list.component.html'
 })
 export class EaClienteListComponent implements OnInit {
   fields: ColumnField[] = [

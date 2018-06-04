@@ -1,4 +1,5 @@
 <eal-form-card [title]="title">
+
   <form [formGroup]="form">
 
     <eal-text label="Ragione sociale" formControlName="ragioneSociale"></eal-text>
@@ -10,5 +11,7 @@
 
     <button type="button" [disabled]="!form.valid" (click)="onSubmit()" class="btn btn-primary">Salva</button>
     <button type="button" class="btn btn-outline-primary" (click)="backToList()">Annulla</button>
+
   </form>
+
 </eal-form-card>
