@@ -1,7 +1,7 @@
 {
   "name": "ea-schematics",
   "version": "0.0.0",
-  "description": "A blank schematics",
+  "description": "Enterprise Applications schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
