@@ -41,7 +41,6 @@ export class RestInterceptor implements HttpInterceptor {
 
       if ( request.method === 'PUT') {
         const item = request.body;
-        console.log('put', item);
         items = [
           ...items.filter(i => i.id < item.id),
           item,
