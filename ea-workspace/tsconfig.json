@@ -15,6 +15,26 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "eal-core": [
+        "dist/eal-core"
+      ],
+      "eal-core/*": [
+        "dist/eal-core/*"
+      ],
+      "eal-toolbox": [
+        "dist/eal-toolbox"
+      ],
+      "eal-toolbox/*": [
+        "dist/eal-toolbox/*"
+      ],
+      "eal-erp": [
+        "dist/eal-erp"
+      ],
+      "eal-erp/*": [
+        "dist/eal-erp/*"
+      ]
+    }
   }
 }

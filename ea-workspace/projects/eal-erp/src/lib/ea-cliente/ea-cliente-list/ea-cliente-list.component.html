@@ -1,0 +1,9 @@
+<eal-table
+  [fields]="fields"
+  [items]="eaClienteList | async"
+  key="id"
+  description="ragioneSociale"
+  (addItem)="addEaCliente()"
+  (editItem)="editEaCliente($event)"
+  (deleteItem)="deleteEaCliente($event)">
+</eal-table>
