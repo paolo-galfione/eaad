@@ -1,4 +1,4 @@
-<div class="d-flex flex-row-reverse" style="margin-bottom: 1em">
+<div class="d-flex flex-row-reverse space-bottom">
   <button type="button" class="btn btn-info" (click)="add()">Nuovo</button>
 </div>
 <table class="table">
@@ -13,8 +13,8 @@
       <th *ngFor="let field of fields">{{item[field.name]}}</th>
       <td>
         <div class="d-flex justify-content-around">
-            <i class="fa fa-edit fa-2x hand" (click)="edit(item['id'])"></i>
-            <i class="fa fa-trash fa-2x hand" (click)="delete(item['id'], item['id'])"></i>
+            <i class="fa fa-edit fa-2x hand" (click)="edit(item[key])"></i>
+            <i class="fa fa-trash fa-2x hand" (click)="delete(item[key], item[description])"></i>
         </div>
       </td>
     </tr>

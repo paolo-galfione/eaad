@@ -9,6 +9,8 @@ import { ColumnField } from '../interfaces/column-field';
 export class EalTableComponent {
   @Input() fields: ColumnField[];
   @Input() items: any[];
+  @Input() key: string;
+  @Input() description: string;
   @Output() addItem = new EventEmitter<void>();
   @Output() editItem = new EventEmitter<number>();
   @Output() deleteItem = new EventEmitter<number>();
