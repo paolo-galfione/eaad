@@ -11,7 +11,7 @@ export const routes = [
   { path: 'home', component: HomeComponent, title: 'Home' },
 //  { path: 'clienti', loadChildren: 'eal-erp#EaClienteModule', title: 'Clienti' }
   { path: 'clienti', loadChildren: 'dist/eal-erp#EaClienteModule', title: 'Clienti' },
-  { path: 'clientigen', loadChildren: 'dist/eal-erp#ClienteModule', title: 'ClientiGen' }
+  { path: 'prodotto', loadChildren: 'dist/eal-erp#ProdottoModule', title: 'Prodotti' }
 ];
 
 @NgModule({
