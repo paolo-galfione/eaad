@@ -35,7 +35,7 @@ fields:
     type: 'string'
     required: false
     control: 'select'
-    options: [ 'Italia', 'Francia', 'Germania' ]
+    options: "[ 'Italia', 'Francia', 'Germania' ]"
   premium:
     label: 'Premium'
     type: 'boolean'
