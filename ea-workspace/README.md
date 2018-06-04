@@ -1,5 +1,3 @@
 # Enterprise Applications - Workspace
 
-
-
-0.1.0 - creazione di projects/ea-erp 
+Esempio di Workspace aziendale. Si tratta di un monorepo dove sono gestite applicazioni e librerie in un unico ecosistema

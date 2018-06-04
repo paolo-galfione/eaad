@@ -17,7 +17,6 @@ export class EalCheckComponent extends BaseControl implements OnInit {
   ngOnInit() {}
 
   toggle(e) {
-    console.log('check', this.value, e);
     this.value = !this.value;
   }
 }
