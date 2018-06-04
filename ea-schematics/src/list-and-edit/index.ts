@@ -24,7 +24,7 @@ export default function (options: any): Rule {
     (_tree: Tree, context: SchematicContext) => {
       // Show the options for this Schematics.
       context.logger.info('options: ' + JSON.stringify(options));
-      context.logger.info('source: ' + JSON.stringify(source));
+      context.logger.info('source: ' + JSON.stringify(source, null, 2));
     },
     mergeWith(apply(url('./files'), [
       template({
