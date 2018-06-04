@@ -1,7 +1,7 @@
 name: 'product'
 description: 'ragioneSociale'
 key: 'id'
-table: [ 'id', 'ragioneSociale', 'contatto', 'citta' ]
+tableColumns: [ 'id', 'ragioneSociale', 'contatto', 'citta' ]
 addTitle: 'Inserimento di un nuovo cliente'
 updateTitle: 'Aggiornamento di un cliente'
 fields:

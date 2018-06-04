@@ -4,7 +4,7 @@ import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { <%=classify(name)%> } from '../interfaces/<%=dasherize(name)%>';
 
-const URL = '/api/cliente';
+const URL = '/api/<%=dasherize(name)%>';
 
 @Injectable()
 export class <%=classify(name)%>Service {
@@ -19,13 +19,10 @@ export class <%=classify(name)%>Service {
       return this.http.get<<%=classify(name)%>>(`${URL}/${id}`);
     } else {
       return of({
-        id: 0,
-        ragioneSociale: '',
-        contatto: '',
-        indirizzo: '',
-        citta: '',
-        nazione: '',
-        premium: false
+<% 
+  let items = Object.keys(fields); 
+  for(let i=0; i<items.length; i++) { %>                <%=items[i]%>: <%=(fields[items[i]].type === 'string')?"''":((fields[items[i]].type === 'number')?'0':'false')%><%=(i+1 === items.length)?'':','%>
+<% } %>
       });
     }
   }

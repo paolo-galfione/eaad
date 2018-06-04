@@ -1,8 +1,8 @@
 <eal-table
   [fields]="fields"
   [items]="<%=camelize(name)%>List | async"
-  key="id"
-  description="ragioneSociale"
+  key="<%=key%>"
+  description="<%=description%>"
   (addItem)="add<%=classify(name)%>()"
   (editItem)="edit<%=classify(name)%>($event)"
   (deleteItem)="delete<%=classify(name)%>($event)">
