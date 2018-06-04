@@ -10,6 +10,7 @@ import { EalTextComponent } from './eal-text/eal-text.component';
 import { EalSelectComponent } from './eal-select/eal-select.component';
 import { EalCheckComponent } from './eal-check/eal-check.component';
 import { EalFormCardComponent } from './eal-form-card/eal-form-card.component';
+import { EalTableComponent } from './eal-table/eal-table.component';
 
 @NgModule({
   imports: [
@@ -24,14 +25,16 @@ import { EalFormCardComponent } from './eal-form-card/eal-form-card.component';
     EalTextComponent,
     EalSelectComponent,
     EalCheckComponent,
-    EalFormCardComponent
+    EalFormCardComponent,
+    EalTableComponent
   ],
   exports: [
     EalShellComponent,
     EalTextComponent,
     EalSelectComponent,
     EalCheckComponent,
-    EalFormCardComponent
+    EalFormCardComponent,
+    EalTableComponent
   ]
 })
 export class EalToolboxModule { }

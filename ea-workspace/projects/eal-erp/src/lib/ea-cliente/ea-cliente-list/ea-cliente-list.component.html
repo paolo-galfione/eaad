@@ -1,28 +1,7 @@
-  <div class="d-flex flex-row-reverse" style="margin-bottom: 1em">
-    <button type="button" class="btn btn-info" (click)="addEaCliente()">Nuovo</button>
-  </div>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Ragione sociale</th>
-        <th scope="col">Contatto</th>
-        <th scope="col">Città</th>
-        <th scope="col" class="commands">Comandi</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let cliente of eaClienteList | async">
-        <th scope="row">{{cliente.id}}</th>
-        <td>{{cliente.ragioneSociale}}</td>
-        <td>{{cliente.contatto}}</td>
-        <td>{{cliente.citta}}</td>
-        <td>
-          <div class="d-flex justify-content-around">
-              <i class="fa fa-edit fa-2x hand" (click)="editEaCliente(cliente.id)"></i>
-              <i class="fa fa-trash fa-2x hand" (click)="deleteEaCliente(cliente.id, cliente.ragioneSociale)"></i>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<eal-table
+  [fields]="fields"
+  [items]="eaClienteList | async"
+  (addItem)="addEaCliente()"
+  (editItem)="editEaCliente($event)"
+  (deleteItem)="deleteEaCliente($event)">
+</eal-table>

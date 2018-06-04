@@ -1,0 +1,22 @@
+<div class="d-flex flex-row-reverse" style="margin-bottom: 1em">
+  <button type="button" class="btn btn-info" (click)="add()">Nuovo</button>
+</div>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" *ngFor="let field of fields">{{field.title}}</th>
+      <th scope="col" class="commands">Comandi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <th *ngFor="let field of fields">{{item[field.name]}}</th>
+      <td>
+        <div class="d-flex justify-content-around">
+            <i class="fa fa-edit fa-2x hand" (click)="edit(item['id'])"></i>
+            <i class="fa fa-trash fa-2x hand" (click)="delete(item['id'], item['id'])"></i>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

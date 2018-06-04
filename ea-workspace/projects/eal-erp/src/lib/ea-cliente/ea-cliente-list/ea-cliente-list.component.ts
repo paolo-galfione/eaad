@@ -3,12 +3,19 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { EaCliente } from '../interfaces/ea-cliente';
 import { EaClienteService } from '../services/ea-cliente-service';
+import { ColumnField } from 'eal-toolbox/lib/interfaces/column-field';
 
 @Component({
   templateUrl: './ea-cliente-list.component.html',
   styleUrls: ['./ea-cliente-list.component.css']
 })
 export class EaClienteListComponent implements OnInit {
+  fields: ColumnField[] = [
+    {name: 'id', title: 'Id'},
+    {name: 'ragioneSociale', title: 'Ragione sociale'},
+    {name: 'contatto', title: 'Contatto'},
+    {name: 'citta', title: 'Città'}
+  ];
   eaClienteList: Observable<EaCliente[]>;
 
   constructor(private router: Router,
@@ -31,13 +38,9 @@ export class EaClienteListComponent implements OnInit {
     this.router.navigate([id], { relativeTo: this.route });
   }
 
-  deleteEaCliente(id: number, text: string) {
-    const result = confirm(`Confermi la cancellazione di: ${text}`);
-    if (result) {
-      console.log('delete', id);
-      this.eaClienteService.delete(id).subscribe(() => {}, err => alert(err));
-      this.loadEaClienteList();
-    }
+  deleteEaCliente(id: number) {
+    this.eaClienteService.delete(id).subscribe(() => {}, err => alert(err));
+    this.loadEaClienteList();
   }
 
 }
