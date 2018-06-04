@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RouteNav } from 'eal-core';
-import { EaClienteRoutingModule } from 'eal-erp';
+import { EaClienteModule } from 'eal-erp';
 
 export const routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
