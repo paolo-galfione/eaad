@@ -16,3 +16,10 @@ Per esempio:
 
 `ng generate ea-schematics:list-and-edit --project=eal-erp --config=cliente.yaml`
 
+compilare la libreria
+
+`ng build --project=eal-erp --prod`
+
+servire l'applicazione
+
+`ng s --project=ea-erp --prod`

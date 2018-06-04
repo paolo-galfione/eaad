@@ -8,7 +8,8 @@ export const routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, title: 'Home' },
 //  { path: 'clienti', loadChildren: 'eal-erp#EaClienteModule', title: 'Clienti' }
-  { path: 'clienti', loadChildren: 'dist/eal-erp#EaClienteModule', title: 'Clienti' }
+  { path: 'clienti', loadChildren: 'dist/eal-erp#EaClienteModule', title: 'Clienti' },
+  { path: 'clientigen', loadChildren: 'dist/eal-erp#ClienteModule', title: 'ClientiGen' }
 ];
 
 @NgModule({
