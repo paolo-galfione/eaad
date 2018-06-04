@@ -4,8 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { <%=classify(name)%>Service } from '../services/<%=dasherize(name)%>-service';
 
-const ADD_TITLE = 'Inserimento di un nuovo cliente';
-const UPDATE_TITLE = 'Aggiornamento di un cliente';
+const ADD_TITLE = '<%=updateTitle%>';
+const UPDATE_TITLE = '<%=addTitle%>';
 
 @Component({
   templateUrl: './<%=dasherize(name)%>-edit.component.html'
