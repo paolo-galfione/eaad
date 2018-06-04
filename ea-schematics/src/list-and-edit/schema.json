@@ -11,6 +11,10 @@
     "project": {
       "type": "string",
       "description": "progetto in cui creare il nuovo business object"
+    },
+    "config": {
+      "type": "string",
+      "description": "file .yaml di configurazione del business object"
     }
   },
   "required": [
