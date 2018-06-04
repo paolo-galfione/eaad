@@ -1,5 +1,6 @@
 export interface <%=classify(name)%> {
-<% for(let field in fields) { %>
-  <%=field%>
+<% 
+   let items = Object.keys(fields); 
+   for(let i=0; i<items.length; i++) { %>  <%=items[i]%><%=(fields[items[i]].required)?'':'?'%>: <%=fields[items[i]].type%><%=(i+1 === items.length)?'':','%>
 <% } %>
 }
