@@ -1,0 +1,10 @@
+<div class="form-group">
+  <label for="{{ngControl.name}}">{{label}}</label>
+  <input type="text"
+         [value]="value"
+         (input)="value = $event.target.value;"
+         (blur)="onTouch()"
+         [disabled]="disabled"
+         class="form-control"
+         id="{{ngControl.name}}">
+</div>

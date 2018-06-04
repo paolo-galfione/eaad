@@ -1,0 +1,10 @@
+<div class="form-group form-check fixmargin">
+  <input type="checkbox"
+         [checked]="value"
+         (change)="toggle($event.target.value)"
+         (blur)="onTouch()"
+         [disabled]="disabled"
+         class="form-check-input"
+         id="{{ngControl.name}}">
+  <label class="form-check-label" for="{{ngControl.name}}">{{label}}</label>
+</div>

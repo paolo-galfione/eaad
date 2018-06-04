@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Route, ActivatedRoute, Router } from '@angular/router';
+import { RouteNav } from 'eal-core';
 
 @Component({
   selector: 'ea-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ea';
+  routes: RouteNav[];
+
+  constructor(private router: Router) {
+    this.routes = this.router.config;
+  }
 }
