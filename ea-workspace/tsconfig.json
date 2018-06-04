@@ -22,6 +22,18 @@
       ],
       "eal-core/*": [
         "dist/eal-core/*"
+      ],
+      "eal-toolbox": [
+        "dist/eal-toolbox"
+      ],
+      "eal-toolbox/*": [
+        "dist/eal-toolbox/*"
+      ],
+      "eal-erp": [
+        "dist/eal-erp"
+      ],
+      "eal-erp/*": [
+        "dist/eal-erp/*"
       ]
     }
   }

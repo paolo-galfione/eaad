@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-dark mb-5 fixed-top">
+  <a class="navbar-brand" href="/">ANGULAR DAY</a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+      <a *ngFor="let route of routes"
+        class="nav-item nav-link"
+        [routerLink]="route.path"
+        routerLinkActive="active">{{route.title}}</a>
+    </div>
+  </div>
+  <div class="navbar-expand ml-auto navbar-nav">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/paolo-galfione" target="_blank">
+        <i class="fa fa-github fa-2x"></i>
+      </a>
+      <a class="nav-item nav-link" href="https://www.linkedin.com/in/paolo-galfione-46a8676/" target="_blank">
+        <i class="fa fa-linkedin fa-2x"></i>
+      </a>
+      <a class="nav-item nav-link" href="https://twitter.com/paologalfione" target="_blank">
+        <i class="fa fa-twitter fa-2x"></i>
+      </a>
+    </div>
+  </div>
+</nav>

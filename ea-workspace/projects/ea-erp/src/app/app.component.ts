@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouteNav, RestInterceptor } from 'eal-core';
+import { Route, ActivatedRoute, Router } from '@angular/router';
+import { RouteNav } from 'eal-core';
 
 @Component({
   selector: 'ea-root',
@@ -7,6 +8,9 @@ import { RouteNav, RestInterceptor } from 'eal-core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ea';
-  pippo: RestInterceptor;
+  routes: RouteNav[];
+
+  constructor(private router: Router) {
+    this.routes = this.router.config;
+  }
 }

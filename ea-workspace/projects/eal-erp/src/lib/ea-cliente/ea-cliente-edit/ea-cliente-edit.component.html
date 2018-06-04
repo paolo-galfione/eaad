@@ -1,0 +1,14 @@
+<eal-form-card [title]="title">
+  <form [formGroup]="form">
+
+    <eal-text label="Ragione sociale" formControlName="ragioneSociale"></eal-text>
+    <eal-text label="Contatto" formControlName="contatto"></eal-text>
+    <eal-text label="Indirizzo" formControlName="indirizzo"></eal-text>
+    <eal-text label="Città" formControlName="citta"></eal-text>
+    <eal-select label="Nazione" [options]="['Italia','Francia','Germania']" formControlName="nazione"></eal-select>
+    <eal-check label="Premium" formControlName="premium"></eal-check>
+
+    <button type="button" [disabled]="!form.valid" (click)="onSubmit()" class="btn btn-primary">Salva</button>
+    <button type="button" class="btn btn-outline-primary" (click)="backToList()">Annulla</button>
+  </form>
+</eal-form-card>

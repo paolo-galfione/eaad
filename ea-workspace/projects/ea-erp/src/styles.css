@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+ @import "~bootswatch/dist/sketchy/bootstrap.min.css";
+/* @import "~bootswatch/dist/sketchy/bootstrap.min.css";
+   @import "~bootswatch/dist/cosmo/bootstrap.min.css"; */
+@import "~font-awesome/css/font-awesome.css";

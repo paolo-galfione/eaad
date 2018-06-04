@@ -1,0 +1,11 @@
+<div class="form-group">
+    <label for="{{ngControl.name}}">{{label}}</label>
+    <select [value]="value"
+            (elect)="value = $event.target.value;"
+            (blur)="onTouch()"
+            [disabled]="disabled"
+            class="form-control"
+            id="{{ngControl.name}}">
+      <option *ngFor="let option of options" [value]="option">{{option}}</option>
+    </select>
+  </div>
