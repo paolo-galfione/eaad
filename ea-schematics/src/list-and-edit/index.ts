@@ -7,6 +7,7 @@ import {
   mergeWith,
   template,
   url,
+  move,
 } from '@angular-devkit/schematics';
 import { dasherize, classify, camelize } from '@angular-devkit/core/src/utils/strings';
 
@@ -28,6 +29,8 @@ export default function (options: any): Rule {
         ...stringUtils,
         name: options.name,
       }),
+      move(`projects/${options.project}/src/lib`)
     ])),
+    
   ]);
 }

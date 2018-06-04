@@ -4,7 +4,8 @@
   "description": "Enterprise Applications schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine src/**/*_spec.js"
+    "test": "npm run build && jasmine src/**/*_spec.js",
+    "start": "npm run build && schematics .:lae --project=test --name=product"
   },
   "keywords": [
     "schematics"
