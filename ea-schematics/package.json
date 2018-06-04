@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js",
-    "start": "npm run build && schematics .:lae --project=test --config=product.yaml"
+    "start": "npm run build && schematics .:lae --project=test --config=product.yaml --debug=false"
   },
   "keywords": [
     "schematics"
