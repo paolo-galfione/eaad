@@ -15,7 +15,7 @@ const stringUtils = { dasherize, classify, camelize };
 
 export default function (options: any): Rule {
 
-  let source: any;
+  let sorgente: any;
 
   return chain([
     (_tree: Tree, context: SchematicContext) => {
@@ -24,20 +24,23 @@ export default function (options: any): Rule {
       const yaml = require('js-yaml');
       const buffer = _tree.read(options.config);
       context.logger.info('buffer: ' + buffer);
-      source = yaml.load(buffer);
-      context.logger.info(JSON.stringify(source, null, 2));
-      context.logger.info('name: '+source.name);
+      sorgente = yaml.load(buffer);
+      context.logger.info(JSON.stringify(sorgente, null, 2));
+      context.logger.info('name: '+sorgente.name);
       return _tree;
     },
-    (_tree: Tree, context: SchematicContext) => {
-      context.logger.info('name: '+source.name);
-      return _tree;
-    },
+
     mergeWith(apply(url('./files'), [
       template({
         ...stringUtils,
-        ...source
+        ...sorgente
       }),
       move(`projects/${options.project}/src/lib`)
-    ]))]);
+    ])),
+    (_tree: Tree, context: SchematicContext) => {
+      context.logger.info('name last: '+sorgente.name);
+      return _tree;
+    },
+    
+    ]);
 }
