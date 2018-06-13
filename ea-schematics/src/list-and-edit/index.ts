@@ -5,9 +5,9 @@ import {
   template,
   url,
   move,
-  chain,
   Tree,
   SchematicContext,
+  SchematicsException,
 } from '@angular-devkit/schematics';
 import { dasherize, classify, camelize } from '@angular-devkit/core/src/utils/strings';
 
@@ -15,32 +15,28 @@ const stringUtils = { dasherize, classify, camelize };
 
 export default function (options: any): Rule {
 
-  let sorgente: any;
+  return (tree: Tree, context: SchematicContext) => {
 
-  return chain([
-    (_tree: Tree, context: SchematicContext) => {
-      // Show the options for this Schematics.
-      context.logger.info('options: ' + JSON.stringify(options));
-      const yaml = require('js-yaml');
-      const buffer = _tree.read(options.config);
-      context.logger.info('buffer: ' + buffer);
-      sorgente = yaml.load(buffer);
-      context.logger.info(JSON.stringify(sorgente, null, 2));
-      context.logger.info('name: '+sorgente.name);
-      return _tree;
-    },
+    const yaml = require('js-yaml');
+    const buffer = tree.read(options.config);
+    const model = yaml.load(buffer);
 
-    mergeWith(apply(url('./files'), [
+    if (model === null) {
+      throw new SchematicsException(`Model file ${options.model} does not exist.`);
+    }
+    // context.logger.info(JSON.stringify(model, null, 2));
+
+    const templateSource = apply(url('./files'), [
       template({
-        ...stringUtils,
-        ...sorgente
+        ...model,
+        ...stringUtils
       }),
       move(`projects/${options.project}/src/lib`)
-    ])),
-    (_tree: Tree, context: SchematicContext) => {
-      context.logger.info('name last: '+sorgente.name);
-      return _tree;
-    },
-    
     ]);
+
+    const rule = mergeWith(templateSource);
+    return rule(tree, context);
+
+  }
+
 }
