@@ -71,9 +71,3 @@ export class RestInterceptor implements HttpInterceptor {
 
 }
 
-/* export const restProvider = {
-  // use fake backend in place of Http service for backend-less development
-  provide: HTTP_INTERCEPTORS,
-  useClass: RestInterceptor,
-  multi: true
-}; */
