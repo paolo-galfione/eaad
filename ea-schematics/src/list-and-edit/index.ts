@@ -1,42 +1,38 @@
 import {
-  Rule,
-  apply,
-  mergeWith,
-  template,
-  url,
-  move,
-  Tree,
-  SchematicContext,
-  SchematicsException,
-} from '@angular-devkit/schematics';
-import { dasherize, classify, camelize } from '@angular-devkit/core/src/utils/strings';
+    Rule,
+    apply,
+    mergeWith,
+    template,
+    url,
+    move,
+    Tree,
+    SchematicContext,
+    SchematicsException
+} from "@angular-devkit/schematics";
+import { dasherize, classify, camelize } from "@angular-devkit/core/src/utils/strings";
 
 const stringUtils = { dasherize, classify, camelize };
 
-export default function (options: any): Rule {
+export default function(options: { project: string; config: string }): Rule {
+    return (tree: Tree, context: SchematicContext) => {
+        const yaml = require("js-yaml");
+        const buffer = tree.read(options.config);
+        const model = yaml.load(buffer);
 
-  return (tree: Tree, context: SchematicContext) => {
+        if (model === null) {
+            throw new SchematicsException(`Model file ${options.config} does not exist.`);
+        }
+        // context.logger.info(JSON.stringify(model, null, 2));
 
-    const yaml = require('js-yaml');
-    const buffer = tree.read(options.config);
-    const model = yaml.load(buffer);
+        const templateSource = apply(url("./files"), [
+            template({
+                ...model,
+                ...stringUtils
+            }),
+            move(`projects/${options.project}/src/lib`)
+        ]);
 
-    if (model === null) {
-      throw new SchematicsException(`Model file ${options.model} does not exist.`);
-    }
-    // context.logger.info(JSON.stringify(model, null, 2));
-
-    const templateSource = apply(url('./files'), [
-      template({
-        ...model,
-        ...stringUtils
-      }),
-      move(`projects/${options.project}/src/lib`)
-    ]);
-
-    const rule = mergeWith(templateSource);
-    return rule(tree, context);
-
-  }
-
+        const rule = mergeWith(templateSource);
+        return rule(tree, context);
+    };
 }
