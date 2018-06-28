@@ -2,9 +2,20 @@
   "name": "ea-workspace",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "prebuild": "npm run build:eal-core   &&   npm run build:eal-toolbox   &&   npm run build:eal-erp",
+    "build": "ng build --prod --project=ea-erp",
+    "serve": "http-server dist/ea-erp -c-1 --cors -p 4200",
+    "start": "concurrently \"npm run watch_build\"   \"npm run serve\"  -k",
+    "build:eal-core": "ng build --project=eal-core --prod",
+    "watch:eal-core": "watch \"npm run build:eal-core\" ./projects/eal-core/src  --filter=./filter_metadata.js",
+    "build:eal-toolbox": "ng build --project=eal-toolbox --prod",
+    "watch:eal-toolbox": "watch \"npm run build:eal-toolbox\" ./projects/eal-toolbox/src  --filter=./filter_metadata.js",
+    "build:eal-erp": "ng build --project=eal-erp --prod",
+    "watch:eal-erp": "watch \"npm run build:eal-erp\" ./projects/eal-erp/src  --filter=./filter_metadata.js",
+    "build:ea-erp": "ng build --project=ea-erp --prod",
+    "watch:ea-erp": "watch \"npm run build:ea-erp\" ./projects/ea-erp/src  --filter=./filter_metadata.js",
+    "watch_all": "concurrently -n w: npm:watch:* -k",
+    "watch_build": "watch \"npm run build\" ./projects  --interval=5  --filter=./filter_metadata.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -50,5 +61,10 @@
     "tslib": "^1.9.3",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
+  },
+  "peerDependencies": {
+    "concurrently": "^3.6.0",
+    "http-server": "^0.11.1",
+    "watch": "^1.0.2"
   }
 }
