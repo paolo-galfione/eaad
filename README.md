@@ -16,5 +16,10 @@ Questo repository contiene:
 0.2.1 - ea-schematics - seconda versione del progetto schematics by Daniele Morosinotto
 
 -   Rimosso dipendenze non utilizzate
--   Setup minimale (tolto tutti test)
 -   Refactor parametro `config` in **`entity`**
+
+0.2.1 - ea-erp - seconda versione del progetto schematics by Daniele Morosinotto
+
+-   Aggiunto scripts custom per start/serve con watch/build di tutto (libs+app)
+-   Aggiunto esempio utilizzo schematics per generare feature ProdottoModule
+-   Rimosso dipendenze non utilizzate
