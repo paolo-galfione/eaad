@@ -1,0 +1,26 @@
+<eal-form-card [title]="title">
+
+  <form [formGroup]="form">
+
+    <eal-text label="Descrizione" formControlName="descrizione"></eal-text>
+
+
+
+    <eal-select label="Tipo prodotto" formControlName="tipologia" [options]="[ 'Alimentari', 'Casalinghi', 'Elettronica' ]"></eal-select>
+
+    <eal-text label="Prezzo" formControlName="prezzo"></eal-text>
+
+
+
+
+    <eal-check label="Disponibile" formControlName="disponibile"></eal-check>
+
+    <eal-text label="Fornitore" formControlName="fornitore"></eal-text>
+
+
+    <button type="button" [disabled]="!form.valid" (click)="onSubmit()" class="btn btn-primary">Salva</button>
+    <button type="button" class="btn btn-outline-primary" (click)="backToList()">Annulla</button>
+
+  </form>
+
+</eal-form-card>
