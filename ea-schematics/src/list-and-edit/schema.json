@@ -1,20 +1,17 @@
 {
-  "$schema": "http://json-schema.org/schema",
-  "id": "SchematicForListAndEdit",
-  "title": "Schema per la generazione di un elenco e form",
-  "type": "object",
-  "properties": {
-    "project": {
-      "type": "string",
-      "description": "progetto in cui creare il nuovo business object"
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicForListAndEdit",
+    "title": "Schema per la generazione di un elenco e form",
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "string",
+            "description": "progetto in cui creare il nuovo business object"
+        },
+        "entity": {
+            "type": "string",
+            "description": "file .yaml di configurazione del business object"
+        }
     },
-    "config": {
-      "type": "string",
-      "description": "file .yaml di configurazione del business object"
-    }
-  },
-  "required": [
-    "project",
-    "config"
-  ]
+    "required": ["project", "entity"]
 }
