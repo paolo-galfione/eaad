@@ -10,16 +10,23 @@ Per associare al progetto ea-schematics digitare:
 
 Pe creare una nuova componente applicativa digitare:
 
-`ng generate ea-schematics:list-and-edit --project=[progetto] --config=[nome]`
+`ng generate ea-schematics:list-and-edit --project=[progetto] --entity=[nome]`
 
 Per esempio:
 
 `ng generate ea-schematics:list-and-edit --project=eal-erp --config=prodotto.yaml`
 
-compilare la libreria
+compilare la libreria `ng build --project=eal-erp --prod`
 
-`ng build --project=eal-erp --prod`
+servire l'applicazione `ng s --project=ea-erp --prod`
 
-servire l'applicazione
+## NUOVI COMANDI
 
-`ng s --project=ea-erp --prod`
+Compilazione di tutto il progetto in --prod
+`npm run build`
+
+Lanciare l'applicazone + watch/rebuild di tutto (libs e apps)
+`npm start`
+
+Servire solamente l'appliczione (dopo aver compilato)
+`npm run serve`
