@@ -19,7 +19,7 @@
     "build:ea-erp": "ng build --project=ea-erp --prod",
     "watch:ea-erp": "watch \"npm run build:ea-erp\" ./projects/ea-erp/src  --filter=./filter_metadata.js",
     "watch_all": "concurrently -n w: npm:watch:* -k",
-    "watch_build": "watch \"npm run build\" ./projects  --interval=5  --filter=./filter_metadata.js"
+    "watch_build": "watch \"npm run build\" ./projects  --interval=5 --wait=60 --filter=./filter_metadata.js"
   },
   "private": true,
   "dependencies": {

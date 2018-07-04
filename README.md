@@ -6,6 +6,10 @@ Questo repository contiene:
 
 -   ea-chematics: un progetto schematics che permette di automatizzare la creazione di componenti applicative pronte all'uso
 
+# Slides
+
+[Slides](eaad_slides.pdf) della presentazione fatta all'Angular Day 2018 - Verona - 15/06/2018 by Paolo Galfione
+
 # Versioni
 
 0.1.0 - ea-erp - prima versione del workspace applicativo by Paolo Galfione
