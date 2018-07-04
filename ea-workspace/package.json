@@ -1,6 +1,6 @@
 {
   "name": "ea-workspace",
-  "version": "0.0.0",
+  "version": "0.2.1",
   "scripts": {
     "prebuild": "npm run build:eal-core   &&   npm run build:eal-toolbox   &&   npm run build:eal-erp",
     "build": "ng build --prod --project=ea-erp",
@@ -15,7 +15,7 @@
     "build:ea-erp": "ng build --project=ea-erp --prod",
     "watch:ea-erp": "watch \"npm run build:ea-erp\" ./projects/ea-erp/src  --filter=./filter_metadata.js",
     "watch_all": "concurrently -n w: npm:watch:* -k",
-    "watch_build": "watch \"npm run build\" ./projects  --interval=5  --filter=./filter_metadata.js",
+    "watch_build": "watch \"npm run build\" ./projects  --interval=5 --wait=60 --filter=./filter_metadata.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
