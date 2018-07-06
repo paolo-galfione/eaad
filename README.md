@@ -27,3 +27,4 @@ Questo repository contiene:
 -   Aggiunto scripts custom per start/serve con watch/build di tutto (libs+app)
 -   Aggiunto esempio utilizzo schematics per generare feature ProdottoModule
 -   Rimosso dipendenze non utilizzate
+-   Setup minimale (tolto tutti test, karma, e2e, tslint)
