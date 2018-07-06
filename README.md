@@ -22,7 +22,7 @@ Questo repository contiene:
 -   Rimosso dipendenze non utilizzate
 -   Refactor parametro `config` in **`entity`**
 
-0.2.1 - ea-erp - seconda versione del progetto schematics by Daniele Morosinotto
+0.2.2 - ea-erp - seconda versione del progetto schematics by Daniele Morosinotto
 
 -   Aggiunto scripts custom per start/serve con watch/build di tutto (libs+app)
 -   Aggiunto esempio utilizzo schematics per generare feature ProdottoModule
