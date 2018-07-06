@@ -1,26 +1,25 @@
 {
-  "name": "ea-schematics",
-  "version": "0.0.0",
-  "description": "Enterprise Applications schematics",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine src/**/*_spec.js",
-    "start": "npm run build && schematics .:lae --project=test --config=product.yaml --debug=false"
-  },
-  "keywords": [
-    "schematics"
-  ],
-  "author": "",
-  "license": "MIT",
-  "schematics": "./src/collection.json",
-  "dependencies": {
-    "@angular-devkit/core": "^0.7.0-beta.1",
-    "@angular-devkit/schematics": "^0.7.0-beta.1",
-    "@types/jasmine": "^2.6.0",
-    "@types/node": "^8.0.31",
-    "jasmine": "^2.8.0",
-    "js-yaml": "^3.12.0",
-    "rxjs-compat": "^6.0.0-tactical-rc.1",
-    "typescript": "^2.5.2"
-  }
+    "name": "ea-schematics",
+    "version": "0.2.1",
+    "description": "Enterprise Applications schematics",
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "start": "npm run build && schematics .:lae --project=test --entity=product.yaml --debug=false"
+    },
+    "keywords": [
+        "schematics"
+    ],
+    "author": "Paolo Galfione",
+    "contributors": [
+        "Daniele Morosinotto (d.morosinotto@icloud.com)"
+    ],
+    "license": "MIT",
+    "schematics": "./src/collection.json",
+    "dependencies": {
+        "@angular-devkit/core": "^0.6.8",
+        "@angular-devkit/schematics": "^0.6.8",
+        "@types/node": "^8.0.31",
+        "js-yaml": "^3.12.0",
+        "typescript": "^2.9.2"
+    }
 }
